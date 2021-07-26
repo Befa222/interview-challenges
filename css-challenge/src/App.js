@@ -3,7 +3,7 @@ import './App.css';
 
 function App() {
 
-const [homeTab, setHomeTab] = useState(true);
+  const [homeTab, setHomeTab] = useState(true);
 
   return (
     <section className='main-page'>
@@ -23,33 +23,33 @@ const [homeTab, setHomeTab] = useState(true);
           <div className='mood-excellent'></div>
         </div>
         <div className='menu-container'>
-        <button onClick={()=>setHomeTab(!homeTab)} className='home-icon'></button>
+          <button onClick={() => setHomeTab(!homeTab)} className='home-icon'></button>
           <button className='menu-icon'></button>
           <button className='message-icon'></button>
           <button className='profile-icon'></button>
         </div>
         {homeTab &&
-        <div className='home-tab'>
+          <div className='home-tab'>
             <div className='tab-top-bar'></div>
             <h1 className='tab-title'>Exercises</h1>
             <div className='exercises-container'>
-                <div className='speaking-skills-container'>
-                  <div className='speaking-skills-image'></div>
-                  <div className='speaking-skills-details'>
-                    <h1 className='skill-title'>Speaking skills</h1>
-                    <h2 className='skill-exercices'>16 exercises</h2>
-                  </div>
+              <div className='speaking-skills-container'>
+                <div className='speaking-skills-image'></div>
+                <div className='speaking-skills-details'>
+                  <h1 className='skill-title'>Speaking skills</h1>
+                  <h2 className='skill-exercices'>16 exercises</h2>
                 </div>
-                <div className='reading-speed-container'>
+              </div>
+              <div className='reading-speed-container'>
                 <div className='reading-speed-image'></div>
-                  <div className='speaking-skills-details'>
-                    <h1 className='skill-title'>Reading speed</h1>
-                    <h2 className='skill-exercices'>8 exercises</h2>
-                  </div>
+                <div className='speaking-skills-details'>
+                  <h1 className='skill-title'>Reading speed</h1>
+                  <h2 className='skill-exercices'>8 exercises</h2>
                 </div>
-                <div className='another-exercice-container'></div>
+              </div>
+              <div className='another-exercice-container'></div>
             </div>
-        </div>
+          </div>
         }
       </div>
     </section>

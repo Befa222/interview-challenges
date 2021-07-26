@@ -369,16 +369,10 @@ h1, h2, h3, input {
     height: 4vw;
   }
   .search-container {
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: left;
-    background-color: rgb(121, 156, 189);
     top: 20vh;
     left: 3vw;
     width: 44vw;
     height: 8vh;
-    border-radius: 15px;
   }
   .magnifying-glass {
     width: 3vw;
@@ -402,24 +396,12 @@ h1, h2, h3, input {
     width: 5vw;
     height: 5vw;
   }
-  .mood-badly {
-    background-image: url('./images/Sad_Face_Emoji.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 50% 50%;
-  }
   .mood-badly::after {
     content: 'Badly';
     position: relative;
     top: 17vw;
     left: 2.5vw;
     font-size: 4vw;
-  }
-  .mood-fine {
-    background-image: url('./images/Fine_Face_Emoji.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 60% 60%;
   }
   .mood-fine::after {
     content: 'Fine';
@@ -428,24 +410,12 @@ h1, h2, h3, input {
     left: 4vw;
     font-size: 4vw;
   }
-  .mood-well {
-    background-image: url('./images/Well_Face_Emoji.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 65% 65%;
-  }
   .mood-well::after {
     content: 'Well';
     position: relative;
     top: 17vw;
     left: 3.5vw;
     font-size: 4vw;
-  }
-  .mood-excellent {
-    background-image: url('./images/Excellent_face_Emoji.png');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 90% 80%;
   }
   .mood-excellent::after {
     content: 'Excellent';
@@ -509,7 +479,6 @@ h1, h2, h3, input {
     background-color: rgb(121, 156, 189);
     border-radius: 25px;
   }
-  
   .tab-title {
     position: relative;
     top: 8%;
