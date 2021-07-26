@@ -1,28 +1,339 @@
-* {
+*, *::before, *::after {
   box-sizing: border-box;
+}
+@font-face {
+  font-family: Rubik;
+  src: url('./fonts/Rubik-VariableFont_wght.ttf');
 }
 body {
   background-color: rgb(229, 233, 244);
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  width: 100vw;
+  height: 100vh;
+  padding: 20px;
+  overflow: hidden;
+  font-family: Rubik;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.App {
-  background-color: rgb(229, 233, 244);
-  padding: 40px;
+h1, h2, h3, input {
+  margin: 0;
+  padding: 0;
 }
 
-.Container {
-  align-items: center;
+.main-page {
+  overflow: hidden;
+}
+
+.home-container {
+  width: 100%;
+  height: 93vh;
   background-color: rgb(62, 126, 184);
   border-radius: 25px;
   color: white;
   display: flex;
   flex-direction: column;
+}
+
+.user-name {
+  position: absolute;
+  left: 15vw;
+  top: 10vh;
   font-weight: bold;
-  padding: 40px;
+  font-size: 5vw;
+}
+
+.date {
+  position: absolute;
+  top: 14vh;
+  left: 15vw;
+  font-size: 3vw;
+  font-weight: lighter;
+  color: rgb(202, 202, 202);
+}
+
+.notification-icon {
+  position: absolute;
+  top: 10vh;
+  right: 15vw;
+  width: 12vw;
+  height: 12vw;
+  background-image: url('./images/bell-icon.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  background-color: rgb(121, 156, 189);
+  border-radius: 15px;
+}
+
+.search-container {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: rgb(121, 156, 189);
+  top: 20vh;
+  left: 15vw;
+  width: 70vw;
+  height: 8vh;
+  border-radius: 15px;
+}
+
+.magnifying-glass {
+  background-image: url('./images/magnifying-glass-icon.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 5vw;
+  height: 5vw;
+  margin-left: 5vw;
+}
+
+.search-bar {
+  background: none;
+  border: none;
+  outline: none;
+  color: white;
+  margin-left: 2vw;
+}
+
+::placeholder {
+  color: white;
+  opacity: 1;
+}
+
+.mood-title {
+  position: absolute;
+  top: 32vh;
+  left: 15vw;
+}
+
+.mood-icon-container {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  top: 37vh;
+  left: 15vw;
+  width: 70vw;
+  height: 10vh;
+}
+
+.mood-badly, .mood-fine, .mood-well, .mood-excellent {
+  width: 15vw;
+  height: 15vw;
+  border-radius: 15px;
+  background-color: rgb(121, 156, 189);
+}
+
+.mood-badly {
+  background-image: url('./images/Sad_Face_Emoji.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50% 50%;
+}
+
+.mood-badly::after {
+  content: 'Badly';
+  position: relative;
+  top: 17vw;
+  left: 2.5vw;
+  font-size: 4vw;
+}
+
+.mood-fine {
+  background-image: url('./images/Fine_Face_Emoji.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 60% 60%;
+}
+
+.mood-fine::after {
+  content: 'Fine';
+  position: relative;
+  top: 17vw;
+  left: 4vw;
+  font-size: 4vw;
+}
+
+.mood-well {
+  background-image: url('./images/Well_Face_Emoji.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 65% 65%;
+}
+
+.mood-well::after {
+  content: 'Well';
+  position: relative;
+  top: 17vw;
+  left: 3.5vw;
+  font-size: 4vw;
+}
+
+.mood-excellent {
+  background-image: url('./images/Excellent_face_Emoji.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 90% 80%;
+}
+
+.mood-excellent::after {
+  content: 'Excellent';
+  position: relative;
+  top: 17vw;
+  font-size: 4vw;
+}
+
+.menu-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  top: 90%;
+  height: 10vh;
+  background-color: white;
+  padding-left: 5vw;
+  padding-right: 5vw;
+  border-radius: 0 0 25px 25px;
+  z-index: 1;
+}
+
+.home-icon, .menu-icon, .message-icon, .profile-icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: transparent;
+  background-size: 50% 50%;
+  border: none;
+  outline: none;
+  width: 15vw;
+  height: 15vw;
+}
+
+.home-icon {
+  background-image: url('./images/home-icon.png');
+}
+
+.menu-icon {
+  background-image: url('./images/menu-icon.png');
+}
+
+.message-icon {
+  background-image: url('./images/message-icon.png');
+}
+
+.profile-icon {
+  background-image: url('./images/profile-icon.png');
+}
+
+.home-tab {
+  position: relative;
+  overflow-y: auto;
+  overflow-x: hidden;
+  top: 40vh;
+  width: 100%;
+  height: 34vh;
+  background-color: white;
+  border-radius: 25px 25px 0 0;
+  z-index: 0;
+}
+
+.tab-top-bar {
+  position: relative;
+  width: 15vw;
+  left: 42.5%;
+  height: 1vh;
+  top: 4%;
+  background-color: rgb(121, 156, 189);
+  border-radius: 25px;
+}
+
+.tab-title {
+  position: relative;
+  top: 8%;
+  font-size: 5vw;
+  left: 10vw;
+  color: black;
+}
+
+.exercises-container {
+  position: relative;
+  top: 10%;
+  width: 80%;
+  left: 10%;
+  background-color: white;
+  z-index: 0;
+}
+
+.speaking-skills-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  top: 2vh;
+  width: 100%;
+  height: 10vh;
+  border: 1px solid rgb(62, 126, 184);
+  border-radius: 20px;
+}
+
+.speaking-skills-image, .reading-speed-image {
+  width: 30%;
+  height: 80%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.speaking-skills-image {
+  background-image: url('./images/heart.png');
+}
+
+.reading-speed-image {
+  background-image: url('./images/pro.png');
+}
+
+.speaking-skills-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  color: black;
+}
+
+.skill-title {
+  font-size: 4.5vw;
+}
+
+.skill-exercices {
+  margin-top: 1vh;
+  font-size: 4vw;
+  color: rgb(62, 126, 184)
+}
+
+.reading-speed-container {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  top: 2vh;
+  width: 100%;
+  height: 10vh;
+  margin-top: 2vh;
+  border: 1px solid rgb(62, 126, 184);
+  border-radius: 20px;
+}
+
+.another-exercice-container {
+  position: relative;
+  top: 2vh;
+  width: 100%;
+  height: 10vh;
+  margin-top: 2vh;
+  border: 1px solid rgb(62, 126, 184);
+  border-radius: 20px;
 }
