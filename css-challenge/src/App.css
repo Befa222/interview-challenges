@@ -1,10 +1,12 @@
 *, *::before, *::after {
   box-sizing: border-box;
 }
+
 @font-face {
   font-family: Rubik;
   src: url('./fonts/Rubik-VariableFont_wght.ttf');
 }
+
 body {
   background-color: rgb(229, 233, 244);
   margin: 0;
@@ -336,4 +338,183 @@ h1, h2, h3, input {
   margin-top: 2vh;
   border: 1px solid rgb(62, 126, 184);
   border-radius: 20px;
+}
+
+@media all and (orientation: landscape) {
+  .home-container {
+    position: absolute;
+    left: 25%;
+    width: 50%;
+    height: 96vh;
+  }
+  .user-name {
+    position: absolute;
+    left: 3vw;
+    top: 5vh;
+    font-size: 1.5vw;
+  }
+  .date {
+    position: absolute;
+    top: 10vh;
+    left: 3vw;
+    font-size: 1vw;
+    font-weight: lighter;
+    color: rgb(202, 202, 202);
+  }
+  .notification-icon {
+    position: absolute;
+    top: 5vh;
+    right: 3vw;
+    width: 4vw;
+    height: 4vw;
+  }
+  .search-container {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: rgb(121, 156, 189);
+    top: 20vh;
+    left: 3vw;
+    width: 44vw;
+    height: 8vh;
+    border-radius: 15px;
+  }
+  .magnifying-glass {
+    width: 3vw;
+    height: 3vw;
+    margin-left: 2vw;
+  }
+  .search-bar {
+    margin-left: 2vw;
+  }
+  .mood-title {
+    top: 32vh;
+    left: 3vw;
+  }
+  .mood-icon-container {
+    top: 37vh;
+    left: 3vw;
+    width: 44vw;
+    height: 10vh;
+  }
+  .mood-badly, .mood-fine, .mood-well, .mood-excellent {
+    width: 5vw;
+    height: 5vw;
+  }
+  .mood-badly {
+    background-image: url('./images/Sad_Face_Emoji.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 50% 50%;
+  }
+  .mood-badly::after {
+    content: 'Badly';
+    position: relative;
+    top: 17vw;
+    left: 2.5vw;
+    font-size: 4vw;
+  }
+  .mood-fine {
+    background-image: url('./images/Fine_Face_Emoji.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60% 60%;
+  }
+  .mood-fine::after {
+    content: 'Fine';
+    position: relative;
+    top: 17vw;
+    left: 4vw;
+    font-size: 4vw;
+  }
+  .mood-well {
+    background-image: url('./images/Well_Face_Emoji.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 65% 65%;
+  }
+  .mood-well::after {
+    content: 'Well';
+    position: relative;
+    top: 17vw;
+    left: 3.5vw;
+    font-size: 4vw;
+  }
+  .mood-excellent {
+    background-image: url('./images/Excellent_face_Emoji.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 90% 80%;
+  }
+  .mood-excellent::after {
+    content: 'Excellent';
+    position: relative;
+    top: 17vw;
+    font-size: 4vw;
+  }
+  .home-icon, .menu-icon, .message-icon, .profile-icon {
+    width: 5vw;
+    height: 5vw;
+  }
+  .skill-title {
+    font-size: 1.5vw;
+  }
+  .skill-exercices {
+    margin-top: 1vh;
+    font-size: 1vw;
+    color: rgb(62, 126, 184)
+  }
+  .tab-title {
+    position: relative;
+    top: 8%;
+    font-size: 1.5vw;
+    left: 10vw;
+    color: black;
+  }
+  .mood-badly::after {
+    top: 5vw;
+    left: 1.3vw;
+    font-size: 1vw;
+  }
+  .mood-fine::after {
+    top: 5vw;
+    left: 1.5vw;
+    font-size: 1vw;
+  }
+  .mood-well::after {
+    top: 5vw;
+    left: 1.6vw;
+    font-size: 1vw;
+  }
+  .mood-excellent::after {
+    top: 5vw;
+    font-size: 1vw;
+    left: 0.5vw;
+  }
+  .home-tab {
+    top: 43vh;
+    width: 100%;
+    height: 34vh;
+    background-color: white;
+    border-radius: 25px 25px 0 0;
+    z-index: 0;
+  }
+  .tab-top-bar {
+    position: relative;
+    width: 5vw;
+    left: 47.5%;
+    height: 1vh;
+    top: 4%;
+    background-color: rgb(121, 156, 189);
+    border-radius: 25px;
+  }
+  
+  .tab-title {
+    position: relative;
+    top: 8%;
+    font-size: 1.5vw;
+    left: 5vw;
+    color: black;
+  }
 }
