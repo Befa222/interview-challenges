@@ -1,3 +1,4 @@
+
 /** 
   An event could look like this:
   ```
@@ -9,6 +10,11 @@
   }
   ```
 */
+
+const { default: compareAsc } = require("date-fns/compareAsc");
+const { default: startOfDay } = require("date-fns/startOfDay");
+
+
 
 /** 
   Take an array of events and return an object that is a  mapping from the 'day' to the events occuring on that day.
@@ -30,9 +36,43 @@
 
  Your solution should not modify any of the function arguments
 */
+
+
+let eventsList = [
+  { id: 2, 
+  startOfDay: '2011-07-29 10:01:11', 
+  endOfDay: '2011-07-29 11:01:11', 
+  title: 'Practice' }, 
+
+  { id: 1, 
+    startOfDay: '2011-08-29 15:10:11',
+    endOfDay: '2011-08-29 16:30:11', 
+    title: 'Break' },
+   
+    { id: 3, 
+      startOfDay: '2011-08-29 10:10:11',
+      endOfDay: '2011-08-29 12:30:11', 
+      title: 'Trying challenge' },
+
+      { id: 4, 
+        startOfDay: '2011-05-29 2:10:11',
+        endOfDay: '2011-05-29 5:30:11', 
+        title: 'Gaming' },
+  
+  
+  ];
+// console.log(eventsList.map(e=>e.startOfDay).sort(compareAsc))
+
+
 const groupEventsByDay = (events) => {
-  return events;
+ 
+  if (events = eventsList)
+ 
+  return console.log(events.map(e=>e.startOfDay).sort(compareAsc))
+  
 };
+
+ module.exports = groupEventsByDay
 
 /** 
   Adjust the start and end date of an event so it maintains its total duration, but is moved `toDay`.
